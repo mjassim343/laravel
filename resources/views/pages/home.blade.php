@@ -11,6 +11,15 @@
     <p class="lead">{{ $tag }}</p>
     <hr class="my-4">
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    @if($hour < 12 && $hour > 12)
+    <p class="alert alert-success">good morning</p>
+    @elseif($hour >= 20)
+    <p class="alert alert-success">good night</p>
+    @elseif($hour > 17)
+    <p class="alert alert-success">good evening</p>
+    @elseif($hour > 11)
+    <p class="alert alert-success">good afternoon</p>
+    @endif
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
     <div class="card-deck mb-8">

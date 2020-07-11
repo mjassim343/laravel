@@ -8,7 +8,14 @@ class PageController extends Controller
 {
     public function home()
     {
-        return view('pages.home',['name' => 'Jassim','tag' => 'we are creating innovative web application']);
+        date_default_timezone_set('Asia/kuwait');
+        $hour = date('G');
+        return view('pages.home',
+        [
+            'name' => 'Jassim',
+            'tag'  => 'we are creating innovative web application',
+            'hour' => $hour
+        ]);
     }
     public function contact()
     {
